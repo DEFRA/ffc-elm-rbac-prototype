@@ -10,7 +10,6 @@
 /tmp
 *~
 .DS_Store
-.svn
 .*.swp
 ___*
 
@@ -19,3 +18,6 @@ ___*
 
 .idea
 .vscode
+node_modules
+npm-debug.log
+lcov.info
