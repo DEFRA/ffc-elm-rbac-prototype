@@ -1,0 +1,88 @@
+{
+  "users": [
+    {
+      "id": "user01",
+      "name": "LM user 1",
+      "roles": [
+        "role01",
+        "role02"
+      ]
+    },
+    {
+      "id": "user02",
+      "name": "Adviser user 1",
+      "roles": [
+        "role02"
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "id": "role01",
+      "name": "PlanCreator",
+      "permissions": [
+        "perm01"
+      ]
+    },
+    {
+      "id": "role02",
+      "name": "LandManager",
+      "permissions": [
+        "perm02",
+        "perm03",
+        "perm05"
+      ]
+    },
+    {
+      "id": "role03",
+      "name": "Adviser",
+      "permissions": [
+        "perm04"
+      ]
+    }
+  ],
+  "permissions": [
+    {
+      "id": "perm01",
+      "name": "plan.create"
+    },
+    {
+      "id": "perm02",
+      "name": "plan.update"
+    },
+    {
+      "id": "perm03",
+      "name": "plan.submitforapproval"
+    },
+    {
+      "id": "perm04",
+      "name": "plan.approve"
+    },
+    {
+      "id": "perm05",
+      "name": "plan.submit"
+    }
+  ],
+  "plans": [
+    {
+      "id": "plan01"
+    }
+  ],
+  "plan-user-roles": [
+    {
+      "planId": "",
+      "userId": "user01",
+      "roleId": "role01"
+    },
+    {
+      "planId": "plan01",
+      "userId": "user01",
+      "roleId": "role02"
+    },
+    {
+      "planId": "plan01",
+      "userId": "user02",
+      "roleId": "role03"
+    }
+  ]
+}
