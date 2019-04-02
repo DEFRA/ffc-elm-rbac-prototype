@@ -7,7 +7,18 @@ module.exports = class RoleService {
   }
 
   getRoles (userId, planId) {
-    return this.repository.getPlanRoles(userId, planId).map(r => this.populateRole(r.roleId))
+    let roles = []
+    let businessRole = this.repository.getBusinessRole(userId)
+    if (businessRole) {
+      roles.push(businessRole)
+    }
+    let elmRole = this.repository.getElmRole(userId)
+    if (elmRole) {
+      roles.push(elmRole)
+    }
+    let planRoles = this.repository.getPlanRoles(userId, planId).map(r => this.populateRole(r.roleId))
+    roles = roles.concat(planRoles)
+    return roles
   }
 
   populateRole (roleId) {
