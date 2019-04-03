@@ -61,7 +61,7 @@
       "id": "role04",
       "name": "BusinessUser",
       "permissions": [
-        "perm06"
+        "perm07"
       ]
     }
   ],
@@ -89,6 +89,10 @@
     {
       "id": "perm06",
       "name": "plan.review"
+    },
+    {
+      "id": "perm07",
+      "name": "allplan.review"
     }
   ],
   "plans": [
