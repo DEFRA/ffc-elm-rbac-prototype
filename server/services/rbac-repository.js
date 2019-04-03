@@ -9,22 +9,14 @@ module.exports = class RbacRepository {
     return this.rbac.users && this.rbac.users.find(u => u.id === userId)
   }
 
+  isInRole (userId, roleName) {
+    const role = this.rbac.roles.find(r => r.name === roleName)
+    const user = this.getUser(userId)
+    return user.roles.includes(role.id) ? role : undefined
+  }
+
   getPlanRoles (userId, planId) {
     return this.rbac['plan-user-roles'].filter(r => r.planId === planId && r.userId === userId)
-  }
-
-  getBusinessRole (userId) {
-    const businessRole = this.rbac.roles.find(r => r.name === 'BusinessUser')
-    const user = this.getUser(userId)
-    const match = user.roles.includes(businessRole.id)
-    return match ? businessRole : null
-  }
-
-  getElmRole (userId) {
-    const elmRole = this.rbac.roles.find(r => r.name === 'ElmUser')
-    const user = this.getUser(userId)
-    const match = user.roles.includes(elmRole.id)
-    return match ? elmRole : null
   }
 
   getRole (roleId) {
