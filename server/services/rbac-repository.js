@@ -9,10 +9,8 @@ module.exports = class RbacRepository {
     return this.rbac.users && this.rbac.users.find(u => u.id === userId)
   }
 
-  isInRole (userId, roleName) {
-    const role = this.rbac.roles.find(r => r.name === roleName)
-    const user = this.getUser(userId)
-    return user.roles.includes(role.id) ? role : undefined
+  getRoles (userId) {
+    return this.getUser(userId).roles
   }
 
   getPlanRoles (userId, planId) {
