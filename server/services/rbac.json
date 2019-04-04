@@ -4,16 +4,14 @@
       "id": "user01",
       "name": "LM user 1",
       "roles": [
-        "role01",
-        "role02"
+        "role01"
       ]
     },
     {
       "id": "user02",
       "name": "Adviser user 1",
       "roles": [
-        "role01",
-        "role03"
+        "role01"
       ]
     },
     {
@@ -27,7 +25,7 @@
       "id": "user04",
       "name": "Public User 1",
       "roles": [
-        "role01"
+        "role05"
       ]
     }
   ],
@@ -63,7 +61,15 @@
       "permissions": [
         "perm07"
       ]
+    },
+    {
+      "id": "role05",
+      "name": "PublicUser",
+      "permissions": [
+        "perm08"
+      ]
     }
+
   ],
   "permissions": [
     {
@@ -93,6 +99,10 @@
     {
       "id": "perm07",
       "name": "allplan.review"
+    },
+    {
+      "id": "perm08",
+      "name": "plan.public"
     }
   ],
   "plans": [
