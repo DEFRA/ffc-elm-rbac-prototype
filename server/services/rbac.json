@@ -1,0 +1,125 @@
+{
+  "users": [
+    {
+      "id": "user01",
+      "name": "LM user 1",
+      "roles": [
+        "role01"
+      ]
+    },
+    {
+      "id": "user02",
+      "name": "Adviser user 1",
+      "roles": [
+        "role01"
+      ]
+    },
+    {
+      "id": "user03",
+      "name": "Business user 1",
+      "roles": [
+        "role04"
+      ]
+    },
+    {
+      "id": "user04",
+      "name": "Public User 1",
+      "roles": [
+        "role05"
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "id": "role01",
+      "name": "ElmUser",
+      "permissions": [
+        "perm01"
+      ]
+    },
+    {
+      "id": "role02",
+      "name": "LandManager",
+      "permissions": [
+        "perm02",
+        "perm03",
+        "perm05",
+        "perm06"
+      ]
+    },
+    {
+      "id": "role03",
+      "name": "Adviser",
+      "permissions": [
+        "perm04",
+        "perm06"
+      ]
+    },
+    {
+      "id": "role04",
+      "name": "BusinessUser",
+      "permissions": [
+        "perm07"
+      ]
+    },
+    {
+      "id": "role05",
+      "name": "PublicUser",
+      "permissions": [
+        "perm08"
+      ]
+    }
+
+  ],
+  "permissions": [
+    {
+      "id": "perm01",
+      "name": "plan.create"
+    },
+    {
+      "id": "perm02",
+      "name": "plan.update"
+    },
+    {
+      "id": "perm03",
+      "name": "plan.submitforapproval"
+    },
+    {
+      "id": "perm04",
+      "name": "plan.approve"
+    },
+    {
+      "id": "perm05",
+      "name": "plan.submit"
+    },
+    {
+      "id": "perm06",
+      "name": "plan.review"
+    },
+    {
+      "id": "perm07",
+      "name": "allplan.review"
+    },
+    {
+      "id": "perm08",
+      "name": "plan.public"
+    }
+  ],
+  "plans": [
+    {
+      "id": "plan01"
+    }
+  ],
+  "plan-user-roles": [
+    {
+      "planId": "plan01",
+      "userId": "user01",
+      "roleId": "role02"
+    },
+    {
+      "planId": "plan01",
+      "userId": "user02",
+      "roleId": "role03"
+    }
+  ]
+}
