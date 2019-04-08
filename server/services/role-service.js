@@ -1,6 +1,5 @@
 const RbacRepository = require('./rbac-repository')
-const { flattenArray } = require('../utlilities/array-helper')
-const _ = require('lodash')
+const { flattenArray, union } = require('../utilities/array-helper')
 
 module.exports = class RoleService {
   constructor (repository) {
@@ -10,7 +9,7 @@ module.exports = class RoleService {
   getRoles (userId, planId) {
     const roles = this.repository.getRoles(userId).map(r => this.populateRole(r))
     const planRoles = this.repository.getPlanRoles(userId, planId).map(r => this.populateRole(r.roleId))
-    return _.union(roles, planRoles)
+    return union(roles, planRoles)
   }
 
   populateRole (roleId) {
