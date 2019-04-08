@@ -16,15 +16,15 @@
     "lint": "standard",
     "unit-test": "lab -c -r console -o stdout -r lcov -o lcov.info",
     "unit-test-watch": "nodemon --inspect=0.0.0.0 --exec npm run unit-test",
-    "test": "npm run lint && npm run unit-test"
+    "pretest": "npm run lint",
+    "test": "npm run unit-test"
   },
   "author": "Mark Harrop, Matthew Collins, John Watson",
   "license": "ISC",
   "dependencies": {
     "boom": "7.3.0",
     "hapi": "18.1.0",
-    "joi": "14.3.1",
-    "lodash": "^4.17.11"
+    "joi": "14.3.1"
   },
   "devDependencies": {
     "blipp": "3.1.3",
