@@ -6,7 +6,6 @@ services:
       context: .
       args: 
         NODE_ENV: ${NODE_ENV-production}
-    # command: npm run start-watch
     environment:
       NODE_ENV: ${NODE_ENV-production}
 
